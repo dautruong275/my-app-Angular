@@ -1,0 +1,22 @@
+.success-container {
+  text-align: center;
+  margin-top: 50px;
+
+  h2 {
+    color: green;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

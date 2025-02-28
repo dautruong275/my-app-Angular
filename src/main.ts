@@ -11,6 +11,6 @@ import { routes } from './app/app.routes';
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(HttpClientModule, FormsModule, RouterModule.forRoot(routes))
+  importProvidersFrom(HttpClientModule, FormsModule ,RouterModule)
   ]
 }).catch(err => console.error(err));
