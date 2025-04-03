@@ -1,0 +1,26 @@
+.home-container {
+  // Tùy chỉnh thêm nếu cần
+  .card {
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: #333;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+}

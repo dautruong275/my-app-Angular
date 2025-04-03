@@ -1,0 +1,19 @@
+<div class="container home-container py-4">
+  <h1 class="text-center mb-4">Danh sách sản phẩm</h1>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    @for (product of products; track product.id) {
+      <div class="col">
+        <div class="card h-100">
+          <img [src]="product.image" class="card-img-top" alt="{{ product.name }}" />
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text text-danger fw-bold">{{ product.price | currency:'VND':'symbol' }}</p>
+            <button class="btn btn-primary w-100">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

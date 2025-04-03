@@ -1,0 +1,19 @@
+main {
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    min-height: calc(100vh - 180px);
+    padding: 15px;
+  }
+
+  @media (max-width: 480px) {
+    min-height: calc(100vh - 200px);
+    padding: 10px;
+  }
+
+  // Khi không có Header/Footer (trang login/register)
+  &:has(router-outlet:not(:empty)) {
+    min-height: 100vh; // Chiếm toàn bộ chiều cao màn hình
+  }
+}

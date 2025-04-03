@@ -1,0 +1,131 @@
+.header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .logo h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 20px;
+      display: flex;
+      gap: 10px;
+
+      input {
+        width: 100%;
+        max-width: 400px;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 8px 15px;
+        background-color: #fff;
+        color: #007bff;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+
+    .user-actions {
+      button {
+        padding: 8px 15px;
+        background-color: #ff4d4f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #d9363e;
+        }
+      }
+    }
+  }
+
+  // Responsive: Tablet (dưới 768px)
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 10px;
+
+      .logo h1 {
+        font-size: 20px;
+      }
+
+      .search-bar {
+        margin: 10px 0;
+        width: 100%;
+        max-width: none;
+
+        input {
+          max-width: none;
+          font-size: 14px;
+        }
+
+        button {
+          padding: 6px 12px;
+          font-size: 14px;
+        }
+      }
+
+      .user-actions {
+        button {
+          padding: 6px 12px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // Responsive: Mobile (dưới 480px)
+  @media (max-width: 480px) {
+    .header-container {
+      padding: 0 10px;
+
+      .logo h1 {
+        font-size: 18px;
+      }
+
+      .search-bar {
+        input {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        button {
+          padding: 6px 10px;
+          font-size: 12px;
+        }
+      }
+
+      .user-actions {
+        button {
+          padding: 6px 10px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
