@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { Router,RouterModule} from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 import { CommonModule } from '@angular/common';
+import { User } from '../../../models/user';
+
 
 @Component({
   selector: 'app-login',
@@ -12,26 +14,20 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule,RouterModule, CommonModule]
 })
 export class LoginComponent {
-  username: string = '';
-  password: string = '';
 
-  constructor(
-    private router: Router,
-    private authService: AuthService,
-   ) {}
+  user: User = new User('', '');
+
+  constructor(private router: Router, private pouterModule: RouterModule, private authService: AuthService) {}
   onLogin() {
-    const loginData = {
-      username: this.username,
-      password: this.password
-    };
-    this.authService.login(loginData).subscribe({
+
+    this.authService.login(this.user).subscribe({
       next: (response) => {
-        const token = response.token;
+        console.log('Login successful:', response);
         this.router.navigate(['/dashboard']);
       },
       error: (error) => {
-        console.error('Register failed', error);
-      }
+        console.log(error);
+      },
     });
 
   }
